@@ -247,7 +247,8 @@ p { color: var(--color-text-muted); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  flex-wrap: nowrap;
 }
 .brand {
   display: flex;
@@ -284,13 +285,15 @@ p { color: var(--color-text-muted); }
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: clamp(1.2rem, 2.4vw, 2.4rem);
+  flex-wrap: nowrap;
+  gap: clamp(0.9rem, 1.9vw, 2.2rem);
 }
 .nav__link {
   position: relative;
   font-size: 0.92rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
   color: rgba(255,255,255,0.85);
   padding-block: 0.4rem;
   transition: color var(--transition);
@@ -314,7 +317,8 @@ p { color: var(--color-text-muted); }
 .nav__right {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  flex-wrap: nowrap;
+  gap: clamp(0.8rem, 1.5vw, 1.4rem);
 }
 .nav__phone {
   display: flex;
@@ -323,6 +327,7 @@ p { color: var(--color-text-muted); }
   color: #fff;
   font-size: 0.95rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 .nav__phone-icon {
   display: grid;
@@ -341,7 +346,12 @@ p { color: var(--color-text-muted); }
   text-transform: uppercase;
   color: var(--color-gold-soft);
 }
-.nav__cta { display: inline-flex; }
+.nav__cta {
+  display: inline-flex;
+  white-space: nowrap;
+  padding-inline: clamp(1.1rem, 1.8vw, 2.2rem);
+  letter-spacing: 0.12em;
+}
 
 /* Hamburger */
 .nav__toggle {
