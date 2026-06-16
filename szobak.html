@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Szobák — Somodi Vendégház</title>
+  <meta name="description" content="A Somodi Vendégház 4 különálló szobája: A Privát Lakosztály, A Családi Fészek, Kilátás a természetre és A Reggeli Napfény. 3 fürdőszoba, saját erkélyek, teljes felszereltség." />
+  <meta name="theme-color" content="#1c1a17" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Szobák — Somodi Vendégház" />
+  <meta property="og:description" content="4 különálló szoba, 3 fürdőszoba, saját erkélyek — mindenkinek megvan a maga tere." />
+  <meta property="og:locale" content="hu_HU" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ugrás a tartalomra</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Fő navigáció">
+        <a class="brand" href="index.html" aria-label="Somodi Vendégház — főoldal">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" stroke="#b8893b" stroke-width="1.2"/>
+            <path d="M20 8 L31 17 V31 H9 V17 Z" stroke="#cfa256" stroke-width="1.4" fill="none"/>
+            <path d="M16 31 V23 H24 V31" stroke="#cfa256" stroke-width="1.2"/>
+            <circle cx="20" cy="15" r="1.6" fill="#cfa256"/>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Somodi</span>
+            <span class="brand__sub">Vendégház</span>
+          </span>
+        </a>
+        <ul class="nav__menu" id="nav-menu">
+          <li><a class="nav__link" href="index.html">Főoldal</a></li>
+          <li><a class="nav__link is-active" href="szobak.html">Szobák</a></li>
+          <li><a class="nav__link" href="wellness.html">Wellness</a></li>
+          <li><a class="nav__link" href="galeria.html">Galéria</a></li>
+          <li><a class="nav__link" href="kapcsolat.html">Kapcsolat &amp; Foglalás</a></li>
+        </ul>
+        <div class="nav__right">
+          <a class="nav__phone" href="tel:+36300000000">
+            <span class="nav__phone-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span><small>Foglalás</small>+36 30 000 0000</span>
+          </a>
+          <a class="btn nav__cta" href="kapcsolat.html">Szabad időpontok</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menü" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PAGE HERO ============ -->
+    <!-- banner kép: tedd be images/szobak-banner.jpg (pl. egy szoba enteriőr) -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <img src="images/szobak-banner.jpg" alt="A Somodi Vendégház szobái" loading="eager" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div class="page-hero__inner">
+        <span class="eyebrow eyebrow--center eyebrow--light">Szállás</span>
+        <h1>A szobák</h1>
+        <p>Négy különálló szoba, három fürdőszoba — mindenkinek a saját, privát visszavonulási lehetősége.</p>
+        <nav class="breadcrumb" aria-label="Hol járok">
+          <a href="index.html">Főoldal</a><span>/</span>Szobák
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============ INTRO ============ -->
+    <section class="section--tight bg-paper">
+      <div class="container container--narrow">
+        <p class="lead reveal" style="text-align:center;">
+          Egy nagyobb társasággal vagy két családdal utazni sokszor logisztikai rémálom.
+          A Somodi Vendégházat úgy alakítottuk ki, hogy a közös programok után mindenkinek
+          meglegyen a saját, privát visszavonulási lehetősége. A 4 különálló szoba és a
+          3 fürdőszoba garantálja, hogy senki sincs a másik útjában, a reggelek pedig
+          stresszmentesen indulnak.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SZOBÁK — CIKKCAKK ============ -->
+    <section class="section bg-cream">
+      <div class="container">
+
+        <!-- ===== 1. SZOBA — kép balra ===== -->
+        <article class="room-detail" id="szoba-1">
+          <!-- 1-es szoba képei:
+               fő: https://drive.google.com/file/d/1T0PCOTzxAakeGelh04Yjf6L9iOUzBFQj/view → images/szoba-1-1.jpg
+               +  https://drive.google.com/file/d/12CC8gwt34YwMsXQFuTXolPzZhEGEuRLu/view → images/szoba-1-2.jpg
+               + mappa: https://drive.google.com/drive/folders/1pVPtxOj1XH1iSFTxP1chnIV4sefoP06f → images/szoba-1-3.jpg ... -->
+          <div class="room-detail__media-col reveal">
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide"><img src="images/szoba-1-1.jpg" alt="A Privát Lakosztály — 1. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-1-2.jpg" alt="A Privát Lakosztály — 2. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-1-3.jpg" alt="A Privát Lakosztály — 3. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Előző kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Következő kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <span class="room-detail__num">01 — Szoba</span>
+            <h2 class="room-detail__title">A Privát Lakosztály</h2>
+            <p class="room-detail__text">
+              Ez a ház legexkluzívabb pontja. Azoknak a pároknak terveztük, akik a társaságon
+              belül is vágynak a teljes szeparációra.
+            </p>
+            <ul class="feature-list">
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Saját, belső fürdőszoba.</strong> <span>Csak a tiétek, nincs várakozási idő.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Privát erkély.</strong> <span>Ideális helyszín egy csendes reggeli kávéhoz.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Teljes felszereltség.</strong> <span>Modern klíma, kényelmes matracok és okostévé, hogy a kedvenc sorozataitokról a pihenés alatt se kelljen lemondanotok.</span></span>
+              </li>
+            </ul>
+            <a class="btn" href="kapcsolat.html">Foglalj időpontot</a>
+          </div>
+        </article>
+
+        <!-- ===== 2. SZOBA — kép jobbra ===== -->
+        <article class="room-detail" id="szoba-2">
+          <div class="reveal">
+            <span class="room-detail__num">02 — Szoba</span>
+            <h2 class="room-detail__title">A Családi Fészek <span style="font-size:0.55em;color:var(--color-text-muted);">(5 főre)</span></h2>
+            <p class="room-detail__text">
+              A legnagyobb szobánk, ahol a család minden tagja elfér. A 3+2 férőhelyes
+              kialakításnak köszönhetően a gyerekek közel vannak, mégis van tér mozogni.
+            </p>
+            <ul class="feature-list">
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Maximális kapacitás.</strong> <span>Kényelmes elrendezés akár 5 főnek is.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Központi helyszín.</strong> <span>Közvetlen elérés a ház tágas közös fürdőszobáihoz.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Teljes felszereltség.</strong> <span>Modern klíma, kényelmes matracok és okostévé a pihenéshez.</span></span>
+              </li>
+            </ul>
+            <a class="btn" href="kapcsolat.html">Foglalj időpontot</a>
+          </div>
+          <!-- 2-es szoba képei:
+               fő: https://drive.google.com/file/d/10QSqx5C9hN5KN2rHlxYxcGpLgBEbG7HF/view → images/szoba-2-1.jpg
+               +  https://drive.google.com/file/d/1Mq5MpwJXc_gtd-GR7HJLnpLd6Gd6yd5r/view → images/szoba-2-2.jpg -->
+          <div class="room-detail__media-col reveal" data-delay="1">
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide"><img src="images/szoba-2-1.jpg" alt="A Családi Fészek — 1. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-2-2.jpg" alt="A Családi Fészek — 2. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Előző kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Következő kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 3. SZOBA — kép balra ===== -->
+        <article class="room-detail" id="szoba-3">
+          <!-- 3-as szoba képei:
+               fő: https://drive.google.com/file/d/1Dv73FxLAb8b1J8GeYzVyDXt_8WQYzfHj/view → images/szoba-3-1.jpg
+               +  https://drive.google.com/file/d/1zvdSU-esnlHffNRXNYcy19cPavoX6hYA/view → images/szoba-3-2.jpg
+               +  https://drive.google.com/file/d/1h0M6-Q_euHIhsIBAIiBNywAxnCqn0HcE/view → images/szoba-3-3.jpg -->
+          <div class="room-detail__media-col reveal">
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide"><img src="images/szoba-3-1.jpg" alt="Kilátás a természetre — 1. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-3-2.jpg" alt="Kilátás a természetre — 2. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-3-3.jpg" alt="Kilátás a természetre — 3. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Előző kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Következő kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <span class="room-detail__num">03 — Szoba</span>
+            <h2 class="room-detail__title">Kilátás a természetre</h2>
+            <p class="room-detail__text">
+              Egy világos, letisztult hálószoba, amelynek legnagyobb előnye a saját erkély.
+              Itt nem kell a közösségi tereken átmenned ahhoz, hogy a szabadban legyél —
+              elég csak kinyitnod az erkélyajtót a maximális kikapcsolódáshoz.
+            </p>
+            <ul class="feature-list">
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Közvetlen erkélykapcsolat.</strong> <span>Közvetlenül kiléphettek a friss levegőre.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Központi helyszín.</strong> <span>Közvetlen elérés a ház tágas közös fürdőszobáihoz.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Teljes felszereltség.</strong> <span>Modern klíma, kényelmes matracok és okostévé a pihenéshez.</span></span>
+              </li>
+            </ul>
+            <a class="btn" href="kapcsolat.html">Foglalj időpontot</a>
+          </div>
+        </article>
+
+        <!-- ===== 4. SZOBA — kép jobbra ===== -->
+        <article class="room-detail" id="szoba-4">
+          <div class="reveal">
+            <span class="room-detail__num">04 — Szoba</span>
+            <h2 class="room-detail__title">A Reggeli Napfény</h2>
+            <p class="room-detail__text">
+              Kialakítását és felszereltségét tekintve a 3-as szoba pontos mása, amelynek
+              legnagyobb előnye ugyancsak a saját erkély. Nem kell a közösségi tereken
+              átmenned ahhoz, hogy a szabadban legyél — elég csak kinyitnod az erkélyajtót.
+            </p>
+            <ul class="feature-list">
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Közvetlen erkélykapcsolat.</strong> <span>Nyisd ki az ajtót, és engedd be a természet hangjait.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Központi helyszín.</strong> <span>Közvetlen elérés a ház tágas közös fürdőszobáihoz.</span></span>
+              </li>
+              <li class="feature">
+                <span class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <span><strong>Teljes felszereltség.</strong> <span>Modern klíma, kényelmes matracok és okostévé a pihenéshez.</span></span>
+              </li>
+            </ul>
+            <a class="btn" href="kapcsolat.html">Foglalj időpontot</a>
+          </div>
+          <!-- 4-es szoba képei:
+               fő: https://drive.google.com/file/d/1vWJwWDXHBC4uhkdUwRSpOMH1Eu0-3gw_/view → images/szoba-4-1.jpg
+               +  https://drive.google.com/file/d/17kYPMCfwn1P2edzFci3a1_d5mQ4wpUcl/view → images/szoba-4-2.jpg
+               +  https://drive.google.com/file/d/1Zj0uNdGZeeuWdmy4hSaDtS43YXHFZbYm/view → images/szoba-4-3.jpg -->
+          <div class="room-detail__media-col reveal" data-delay="1">
+            <div class="carousel" data-carousel>
+              <div class="carousel__track">
+                <div class="carousel__slide"><img src="images/szoba-4-1.jpg" alt="A Reggeli Napfény — 1. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-4-2.jpg" alt="A Reggeli Napfény — 2. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+                <div class="carousel__slide"><img src="images/szoba-4-3.jpg" alt="A Reggeli Napfény — 3. kép" loading="lazy" style="aspect-ratio:4/3;width:100%;height:100%;object-fit:cover"></div>
+              </div>
+              <button class="carousel__btn carousel__btn--prev" aria-label="Előző kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="carousel__btn carousel__btn--next" aria-label="Következő kép"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              <div class="carousel__dots"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ ZÁRÓ CTA ============ -->
+    <section class="section cta-band">
+      <div class="cta-band__media">
+        <img src="images/cta-bg.jpg" alt="Somodi Vendégház esti hangulatban" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div class="container">
+        <span class="eyebrow eyebrow--center eyebrow--light reveal">Foglalás</span>
+        <h2 class="reveal" data-delay="1">Válaszd ki a szobát, foglald le a házat</h2>
+        <p class="reveal" data-delay="1">A foglalással a teljes ház, mind a 4 szoba és a wellness részleg is 100%-ban a tiétek.</p>
+        <a class="btn btn--solid-light reveal" data-delay="2" href="kapcsolat.html">
+          Foglalj időpontot
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="38" height="38" stroke="#b8893b" stroke-width="1.2"/>
+              <path d="M20 8 L31 17 V31 H9 V17 Z" stroke="#cfa256" stroke-width="1.4" fill="none"/>
+              <path d="M16 31 V23 H24 V31" stroke="#cfa256" stroke-width="1.2"/>
+              <circle cx="20" cy="15" r="1.6" fill="#cfa256"/>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__name">Somodi</span>
+              <span class="brand__sub">Vendégház</span>
+            </span>
+          </a>
+          <p>Saját luxusbirtok tömeg nélkül — privát wellness, tágas terek és teljes nyugalom egy helyen. Csak egyben bérelhető, kizárólag nektek.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Oldalak</h4>
+          <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szobak.html">Szobák</a></li>
+            <li><a href="wellness.html">Wellness &amp; Felszereltség</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat &amp; Foglalás</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tudnivalók</h4>
+          <ul>
+            <li><a href="index.html#why">Miért válassz minket</a></li>
+            <li><a href="kapcsolat.html#araink">Áraink</a></li>
+            <li><a href="kapcsolat.html">Foglalási feltételek</a></li>
+            <li><a href="index.html#faq">Gyakori kérdések</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Somodi Vendégház</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+36300000000">+36 30 000 0000</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <a href="mailto:info@somodivendeghaz.hu">info@somodivendeghaz.hu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Somodi Vendégház. Minden jog fenntartva.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h2.5l.5-3H14V9z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

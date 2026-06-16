@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galéria — Somodi Vendégház</title>
+  <meta name="description" content="Pillants be a Somodi Vendégházba: enteriőrök, wellness, terek és a birtok hangulata képekben és videóban. Foglald le a teljes házat!" />
+  <meta name="theme-color" content="#1c1a17" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Galéria — Somodi Vendégház" />
+  <meta property="og:description" content="Enteriőrök, wellness és a birtok hangulata képekben." />
+  <meta property="og:locale" content="hu_HU" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ugrás a tartalomra</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Fő navigáció">
+        <a class="brand" href="index.html" aria-label="Somodi Vendégház — főoldal">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="38" height="38" stroke="#b8893b" stroke-width="1.2"/>
+            <path d="M20 8 L31 17 V31 H9 V17 Z" stroke="#cfa256" stroke-width="1.4" fill="none"/>
+            <path d="M16 31 V23 H24 V31" stroke="#cfa256" stroke-width="1.2"/>
+            <circle cx="20" cy="15" r="1.6" fill="#cfa256"/>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Somodi</span>
+            <span class="brand__sub">Vendégház</span>
+          </span>
+        </a>
+        <ul class="nav__menu" id="nav-menu">
+          <li><a class="nav__link" href="index.html">Főoldal</a></li>
+          <li><a class="nav__link" href="szobak.html">Szobák</a></li>
+          <li><a class="nav__link" href="wellness.html">Wellness</a></li>
+          <li><a class="nav__link is-active" href="galeria.html">Galéria</a></li>
+          <li><a class="nav__link" href="kapcsolat.html">Kapcsolat &amp; Foglalás</a></li>
+        </ul>
+        <div class="nav__right">
+          <a class="nav__phone" href="tel:+36300000000">
+            <span class="nav__phone-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span><small>Foglalás</small>+36 30 000 0000</span>
+          </a>
+          <a class="btn nav__cta" href="kapcsolat.html">Szabad időpontok</a>
+        </div>
+        <button class="nav__toggle" aria-label="Menü" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ VIDEÓ BANNER ============ -->
+    <!-- Galéria banner videó: tedd be images/galeria.mp4 (vagy használj képet poster-ként).
+         A brief videó-linkje: https://drive.google.com/file/d/1Jy0cpNAXoJgJlc_6XEiCQl7OhfMCbz3m/view -->
+    <section class="page-hero" style="min-height:78vh;">
+      <div class="page-hero__media">
+        <!-- VIDEÓS VERZIÓ (ha lesz galeria.mp4, töröld a <div>-et és vedd ki a kommentből):
+        <video autoplay muted loop playsinline poster="images/galeria-poster.jpg">
+          <source src="images/galeria.mp4" type="video/mp4" />
+        </video>
+        -->
+        <img src="images/galeria-poster.jpg" alt="Somodi Vendégház galéria" loading="eager" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div class="page-hero__inner">
+        <span class="eyebrow eyebrow--center eyebrow--light">Galéria</span>
+        <h1>Pillants be hozzánk</h1>
+        <p>Enteriőrök, wellness és a birtok hangulata — minden, ami vár rátok.</p>
+        <div style="margin-top:2rem;">
+          <a class="btn btn--solid-light" href="kapcsolat.html">
+            Foglalj időpontot
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <p style="margin-top:1.4rem;font-size:0.82rem;color:rgba(255,255,255,0.6);">
+          Hamarosan: 3D-s épület-körbejárás
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KÉPRÁCS ============ -->
+    <!-- 15 kép helye. Cseréld: images/galeria-1.jpg ... images/galeria-15.jpg
+         A data-lb-src a lightbox nagy képének forrása (legyen ugyanaz vagy nagyobb felbontás). -->
+    <section class="section bg-paper">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow eyebrow--center reveal">Képek</span>
+          <h2 class="reveal" data-delay="1">A ház és a birtok</h2>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item gallery-item--wide" data-lb-src="images/galeria-1.jpg" data-lb-alt="Somodi Vendégház 1">
+            <img src="images/galeria-1.jpg" alt="Somodi Vendégház — 1. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item gallery-item--tall" data-lb-src="images/galeria-2.jpg" data-lb-alt="Somodi Vendégház 2">
+            <img src="images/galeria-2.jpg" alt="Somodi Vendégház — 2. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-3.jpg" data-lb-alt="Somodi Vendégház 3">
+            <img src="images/galeria-3.jpg" alt="Somodi Vendégház — 3. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-4.jpg" data-lb-alt="Somodi Vendégház 4">
+            <img src="images/galeria-4.jpg" alt="Somodi Vendégház — 4. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-5.jpg" data-lb-alt="Somodi Vendégház 5">
+            <img src="images/galeria-5.jpg" alt="Somodi Vendégház — 5. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-lb-src="images/galeria-6.jpg" data-lb-alt="Somodi Vendégház 6">
+            <img src="images/galeria-6.jpg" alt="Somodi Vendégház — 6. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-7.jpg" data-lb-alt="Somodi Vendégház 7">
+            <img src="images/galeria-7.jpg" alt="Somodi Vendégház — 7. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item gallery-item--tall" data-lb-src="images/galeria-8.jpg" data-lb-alt="Somodi Vendégház 8">
+            <img src="images/galeria-8.jpg" alt="Somodi Vendégház — 8. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-9.jpg" data-lb-alt="Somodi Vendégház 9">
+            <img src="images/galeria-9.jpg" alt="Somodi Vendégház — 9. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-10.jpg" data-lb-alt="Somodi Vendégház 10">
+            <img src="images/galeria-10.jpg" alt="Somodi Vendégház — 10. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-11.jpg" data-lb-alt="Somodi Vendégház 11">
+            <img src="images/galeria-11.jpg" alt="Somodi Vendégház — 11. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-lb-src="images/galeria-12.jpg" data-lb-alt="Somodi Vendégház 12">
+            <img src="images/galeria-12.jpg" alt="Somodi Vendégház — 12. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-13.jpg" data-lb-alt="Somodi Vendégház 13">
+            <img src="images/galeria-13.jpg" alt="Somodi Vendégház — 13. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-14.jpg" data-lb-alt="Somodi Vendégház 14">
+            <img src="images/galeria-14.jpg" alt="Somodi Vendégház — 14. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+          <div class="gallery-item" data-lb-src="images/galeria-15.jpg" data-lb-alt="Somodi Vendégház 15">
+            <img src="images/galeria-15.jpg" alt="Somodi Vendégház — 15. kép" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            <span class="gallery-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3.5rem;" class="reveal">
+          <a class="btn" href="kapcsolat.html">
+            Foglalj időpontot
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" data-lightbox aria-hidden="true">
+    <button class="lightbox__close" aria-label="Bezárás"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Előző"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <img src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Következő"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="38" height="38" stroke="#b8893b" stroke-width="1.2"/>
+              <path d="M20 8 L31 17 V31 H9 V17 Z" stroke="#cfa256" stroke-width="1.4" fill="none"/>
+              <path d="M16 31 V23 H24 V31" stroke="#cfa256" stroke-width="1.2"/>
+              <circle cx="20" cy="15" r="1.6" fill="#cfa256"/>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__name">Somodi</span>
+              <span class="brand__sub">Vendégház</span>
+            </span>
+          </a>
+          <p>Saját luxusbirtok tömeg nélkül — privát wellness, tágas terek és teljes nyugalom egy helyen. Csak egyben bérelhető, kizárólag nektek.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Oldalak</h4>
+          <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szobak.html">Szobák</a></li>
+            <li><a href="wellness.html">Wellness &amp; Felszereltség</a></li>
+            <li><a href="galeria.html">Galéria</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat &amp; Foglalás</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tudnivalók</h4>
+          <ul>
+            <li><a href="index.html#why">Miért válassz minket</a></li>
+            <li><a href="kapcsolat.html#araink">Áraink</a></li>
+            <li><a href="kapcsolat.html">Foglalási feltételek</a></li>
+            <li><a href="index.html#faq">Gyakori kérdések</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Somodi Vendégház</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+36300000000">+36 30 000 0000</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <a href="mailto:info@somodivendeghaz.hu">info@somodivendeghaz.hu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Somodi Vendégház. Minden jog fenntartva.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h2.5l.5-3H14V9z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
