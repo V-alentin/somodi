@@ -6,3 +6,9 @@
 *.swp
 # Logok
 *.log
+
+# Nyers fotó-források (HEIC) — NEM kerülnek az élesített oldalra.
+# A webre szánt képek az images/ mappában vannak, WebP formátumban.
+drive-download-*/
+*.HEIC
+*.heic
