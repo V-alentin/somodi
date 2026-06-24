@@ -731,10 +731,13 @@ p { color: var(--color-text-muted); }
 }
 .bg-ink .feature__icon { background: rgba(184,137,59,0.16); }
 .feature__icon svg { width: 17px; height: 17px; }
-.feature strong { color: var(--color-ink); font-weight: 600; }
+.feature strong { display: block; color: var(--color-ink); font-weight: 600; margin-bottom: 0.15rem; }
 .bg-ink .feature strong { color: #fff; }
 .feature span { color: var(--color-text); }
+/* A cím (strong) alatti leíró szöveg külön sorban, halványabban */
+.feature > span > span { display: block; color: var(--color-text-muted); font-size: 0.92em; line-height: 1.5; }
 .bg-ink .feature span { color: var(--color-text-light); }
+.bg-ink .feature > span > span { color: var(--color-text-light); }
 
 /* ----- Kép-carousel a szobáknál ----- */
 .carousel { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
