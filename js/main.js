@@ -200,8 +200,21 @@
           e.addEventListener("click", () => {
             grid.querySelectorAll(".is-selected").forEach((x) => x.classList.remove("is-selected"));
             e.classList.add("is-selected");
-            const dateInput = document.querySelector("#booking-date");
-            if (dateInput) dateInput.value = `${view.y}. ${view.m + 1}. ${d}.`;
+            // ISO dátum (YYYY-MM-DD) az érkezés mezőhöz (type="date")
+            const iso = `${view.y}-${String(view.m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+            const erkezes = document.querySelector("#erkezes");
+            if (erkezes) {
+              erkezes.value = iso;
+              // Ha a távozás üres vagy korábbi, állítsuk a következő napra alapként
+              const tavozas = document.querySelector("#tavozas");
+              if (tavozas && (!tavozas.value || tavozas.value <= iso)) {
+                const nd = new Date(view.y, view.m, d + 1);
+                tavozas.value = `${nd.getFullYear()}-${String(nd.getMonth() + 1).padStart(2, "0")}-${String(nd.getDate()).padStart(2, "0")}`;
+              }
+            }
+            // "Tovább a foglaláshoz" gomb megjelenítése a naptár alatt
+            const goBtn = cal.querySelector("[data-cal-next-step]");
+            if (goBtn) goBtn.style.display = "";
           });
         }
         grid.appendChild(e);
@@ -215,34 +228,95 @@
       view.m++; if (view.m > 11) { view.m = 0; view.y++; }
       render();
     });
+
+    // "Tovább a foglaláshoz" — az űrlaphoz görget és a Vezetéknév mezőre fókuszál
+    const nextStep = cal.querySelector("[data-cal-next-step]");
+    if (nextStep) {
+      nextStep.addEventListener("click", () => {
+        const form = document.querySelector("[data-form]");
+        if (form) {
+          form.scrollIntoView({ behavior: "smooth", block: "center" });
+          const firstField = form.querySelector("#vezeteknev");
+          if (firstField) setTimeout(() => firstField.focus(), 400);
+        }
+      });
+    }
     render();
   }
 
-  /* ---------- Form (demo submit) ---------- */
+  /* ---------- Foglalási űrlap (Web3Forms) ---------- */
   document.querySelectorAll("[data-form]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
+    const ok = form.querySelector(".form-success");
+    const errBox = form.querySelector(".form-error");
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // Kötelező mezők ellenőrzése (a novalidate miatt kézzel).
-      // A böngésző beépített buborékját használjuk, kiemelten a GDPR-hozzájárulásra.
+      // Kötelező mezők ellenőrzése (a novalidate miatt kézzel),
+      // kiemelten a GDPR-hozzájárulásra.
       const consent = form.querySelector("#gdpr");
       if (consent && !consent.checked) {
         consent.setCustomValidity("A foglaláshoz el kell fogadnod az adatkezelési tájékoztatót.");
       } else if (consent) {
         consent.setCustomValidity("");
       }
+      // Érkezés < távozás ellenőrzés
+      const erk = form.querySelector("#erkezes");
+      const tav = form.querySelector("#tavozas");
+      if (erk && tav && erk.value && tav.value && tav.value <= erk.value) {
+        tav.setCustomValidity("A távozás dátuma legyen későbbi az érkezésnél.");
+      } else if (tav) {
+        tav.setCustomValidity("");
+      }
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      const ok = form.querySelector(".form-success");
-      if (ok) ok.classList.add("is-visible");
-      form.querySelectorAll("input, textarea, select").forEach((f) => {
-        if (f.type === "checkbox" || f.type === "radio") f.checked = false;
-        else if (f.type !== "submit") f.value = "";
-      });
-      if (ok) ok.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (errBox) { errBox.style.display = "none"; errBox.textContent = ""; }
+
+      // Ha az access key még a fejlesztői helykitöltő, ne küldjünk élesben — jelezzük.
+      const keyField = form.querySelector('[name="access_key"]');
+      const isDemo = !keyField || /YOUR-WEB3FORMS-ACCESS-KEY/.test(keyField.value);
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = "0.7"; }
+
+      try {
+        if (isDemo) {
+          // Demo mód: nincs valódi kulcs, csak vizuális visszajelzés.
+          await new Promise((r) => setTimeout(r, 300));
+        } else {
+          const res = await fetch(form.action, {
+            method: "POST",
+            headers: { Accept: "application/json" },
+            body: new FormData(form),
+          });
+          const data = await res.json();
+          if (!res.ok || !data.success) {
+            throw new Error(data.message || "Ismeretlen hiba");
+          }
+        }
+
+        if (ok) {
+          ok.classList.add("is-visible");
+          ok.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        form.querySelectorAll("input, textarea, select").forEach((f) => {
+          if (f.type === "hidden") return;
+          if (f.type === "checkbox" || f.type === "radio") f.checked = false;
+          else if (f.type !== "submit") f.value = "";
+        });
+      } catch (err) {
+        if (errBox) {
+          errBox.style.display = "block";
+          errBox.textContent =
+            "Sajnos nem sikerült elküldeni a kérést. Kérjük, próbáld újra, vagy keress minket telefonon: +36 30 789 1496.";
+          errBox.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ""; }
+      }
     });
   });
 

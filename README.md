@@ -4,13 +4,25 @@ Statikus weboldal (HTML + CSS + vanilla JS), build nélkül. A Virella Luxury Ho
 sablon hangulatára épülő, prémium, sötét-meleg dizájn — saját design rendszerrel,
 nem template-másolat.
 
-> **⚠️ FONTOS — a jelenlegi képek ideiglenes DEMÓ fotók!**
-> A `images/` mappában most jogtiszta, ideiglenes hangulatképek vannak (Picsum.photos),
-> hogy lásd a kész megjelenést. **Ezeket cseréld le a Somodi Vendégház valódi fotóira.**
-> A weboldal `<img src="images/...">` tagekkel hivatkozik a képekre — ha a saját
-> képeidet **pontosan ugyanazokkal a fájlnevekkel** mented a `images/` mappába
-> (felülírva a demókat), automatikusan megjelennek, semmi mást nem kell módosítani.
-> A fájlnév → Drive-link megfeleltetést lásd lent a táblázatban.
+> **Állapot:** a `images/` mappában a Somodi Vendégház **valódi fotói** vannak
+> (HEIC → WebP, helyes tájolással). A tartalom a valós adatokra épül:
+> 9177 Ásványráró, Tűzoltó utca 11. · +36 30 789 1496 (Németh Nikolett) ·
+> +36 30 232 7108 (Somodi Bálint Gyula) · somodiniki1995@gmail.com · NTAK M49989.
+>
+> **⚠️ Két dolgot kell még pótolni az élesítés előtt:**
+> 1. **Web3Forms access key** — a `kapcsolat.html`-ben a foglalási űrlapnál az
+>    `<input name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">` értékét cseréld
+>    le a [web3forms.com](https://web3forms.com)-on ingyen generált saját kulcsodra.
+>    Enélkül az űrlap csak vizuális visszajelzést ad, nem küld e-mailt. A kulccsal a
+>    kérés a megadott e-mail címre érkezik, a vendég pedig automatikus visszaigazolót kap.
+> 2. **Facebook-link** — amint megvan az oldal URL-je, told be a láblécbe (mind az
+>    oldalon, az Instagram `<a>` mellé) és a `kapcsolat.html` „Közösségi média" blokkjába.
+>    Az Instagram (`@somodi_vendeghaz`) már be van kötve.
+>
+> **Jogi oldalak:** `foglalasi-feltetelek.html`, `hazirend.html`, `wellness-hazirend.html`
+> elkészültek; az adatkezelési tájékoztató jelenleg a meglévő WordPress-oldalra mutat
+> (`somodivendeghaz.hu/adatvedelmi-iranyelvek/`). Ha kész az új szabályzat, készíts egy
+> `adatkezeles.html`-t és állítsd át rá a linkeket.
 
 ## Gyors indítás
 

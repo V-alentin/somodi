@@ -1140,6 +1140,14 @@ p { color: var(--color-text-muted); }
   font-size: 0.92rem;
 }
 .form-success.is-visible { display: block; }
+.form-error {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: rgba(170,60,40,0.10);
+  border-left: 3px solid #aa3c28;
+  color: #7a2a1c;
+  font-size: 0.92rem;
+}
 
 /* ==========================================================================
    CTA SÁV
