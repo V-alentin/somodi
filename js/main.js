@@ -222,10 +222,25 @@
   document.querySelectorAll("[data-form]").forEach((form) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      // Kötelező mezők ellenőrzése (a novalidate miatt kézzel).
+      // A böngésző beépített buborékját használjuk, kiemelten a GDPR-hozzájárulásra.
+      const consent = form.querySelector("#gdpr");
+      if (consent && !consent.checked) {
+        consent.setCustomValidity("A foglaláshoz el kell fogadnod az adatkezelési tájékoztatót.");
+      } else if (consent) {
+        consent.setCustomValidity("");
+      }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       const ok = form.querySelector(".form-success");
       if (ok) ok.classList.add("is-visible");
       form.querySelectorAll("input, textarea, select").forEach((f) => {
-        if (f.type !== "submit") f.value = "";
+        if (f.type === "checkbox" || f.type === "radio") f.checked = false;
+        else if (f.type !== "submit") f.value = "";
       });
       if (ok) ok.scrollIntoView({ behavior: "smooth", block: "center" });
     });
